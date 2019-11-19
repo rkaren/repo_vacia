@@ -1,0 +1,15 @@
+
+dn: uid=pilotodos,ou=pilotos,dc=korriban,dc=sith
+ObjectClass: inetOrgPerson
+ObjectClass: posixAccount
+ObjectClass: shadowAccount
+cn: pilotodos
+sn: pilotodos
+uid: pilotodos
+uidNumber: 3000
+gidNumber: 3000
+userPassword: pilotodos
+homeDirectory: /home/pilotodos
+loginShell: /bin/bash
+gecos: pilotodos
+descripcion: User account
