@@ -60,9 +60,9 @@ function_servidor(){
 function_extension(){
     OUTPUT="/tmp/input.txt"
     # Dibuja el InpuntBox
-    dialog --title "La segunda parte del nombre del dominio" \
-    --backtitle "Parseador de CSV a LDIP" \
-    --inputbox "Indica la segunda parte del nombre de tu dominio (ally, local)" 8 60 2>$OUTPUT
+    dialog --title "La extension del dominio" \
+    --backtitle "PROGRAMA PARSEADOR" \
+    --inputbox "Indica la extension del dominio" 8 60 2>$OUTPUT
     # lee lo que está escribiendo el usuario
     respose=$?
     # lee lo que hay en OUTPUT  y lo redirige
@@ -98,7 +98,7 @@ function_menu(){
 	case $menuitem in
 		NOMBRE) echo "Elegiste nombre"; function_admin;;
 		SERVIDOR) echo "Elegiste servidor"; function_servidor;;
-		EXTENSION) echo "Elegiste extension";;
+		EXTENSION) echo "Elegiste extension";function_extension;;
 		ORIGEN) echo "Elegiste origen";;
 		EXIT) echo "Bye"; break;;
 	esac
