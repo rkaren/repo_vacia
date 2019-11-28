@@ -16,18 +16,18 @@ pause(){
 
 one(){
  echo "Opcion uno, indica el nombre del dominio"
- read extension
+ read dominio
  pause
 }
 
 two(){
- echo "Opcion uno, indica la extension del dominio"
- read admin
+ echo "Opcion dos, indica la extension del dominio"
+ read extension
  pause
 }
 
 three(){
- echo "Opcion uno, indica el nombre del admin LDAP"
+ echo "Opcion tres, indica el nombre del admin LDAP"
  read admin
  pause
 }
