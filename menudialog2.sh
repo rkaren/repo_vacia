@@ -96,17 +96,17 @@ function_menu(){
 	echo $menuitem
 	#entra en el case
 	case $menuitem in
-		NOMBRE) echo "Elegiste nombre"; function_admin;;
-		SERVIDOR) echo "Elegiste servidor"; function_servidor;;
-		EXTENSION) echo "Elegiste extension";function_extension;;
-		ORIGEN) echo "Elegiste origen";;
-		EXIT) echo "Bye"; break;;
+		Nombre) echo "Elegiste nombre"; function_admin;;
+		Servidor) echo "Elegiste servidor"; function_servidor;;
+		Extension) echo "Elegiste extension";function_extension;;
+		Origen) echo "Elegiste origen";;
+		Exit) echo "Bye"; break;;
 	esac
 }
 
 while [ $salir -eq 7 ]
 do
-	function_menu;
+	function_menu
 done
 
 
