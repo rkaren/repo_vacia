@@ -1,5 +1,4 @@
 #!/bin/bash
-#script para poder leer entradas
 #archivo temporal donde guardar lo que vamos leyendo
 #INPUT=/tmp/menu.sh.$$
 #INPUT=/tmp/menu.sh.$$
