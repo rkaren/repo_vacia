@@ -3,7 +3,7 @@
   #variable q almacena linea a linea e inserta tbn linea a linea
   let fila
   #archivo CSV a leer con cat
-  cat muestra100curada.csv
+  cat archivo.csv
   #bucle para leer campos
   #IFS  es separador interno de campo como en /etc/passwd hay :
   # leera read user uid gid 

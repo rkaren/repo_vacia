@@ -103,7 +103,7 @@ function_csvarchivo(){
   #ingreso de usuarios de dominio establecido alderaan
   #variable q almacena linea a linea e inserta tbn linea a linea
   let fila
-  #archivo CSV a leer con cat muestra100curada.csv lo reemplazamos x el q  ahora sera seleccionado
+  #archivo CSV a leer con cat reemplazamos x el q  ahora sera seleccionado
   #declarado arriba E INGRESADO EN EL SUBMENU  selectcsv
   cat $csvarchivo
   #bucle para leer campos
@@ -181,4 +181,8 @@ do
 	function_menu
 done
 
+#añadimos al dominio
+#ldapadd -x -D cn=admin,dc=alderaan,dc=ally -W -f usuariosldif.ldif
+#rm /tmp/input.txt
+#rm /tmp/menu.sh
 
