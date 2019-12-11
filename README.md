@@ -1,7 +1,5 @@
 # repo_vacia
 Repositorios para automatizar creación fichero .ldif 
-# repo_vacia
-Repositorios para automatizar creación fichero .ldif 
 
 Este repositorio contiene ejercicios basicos y preparatorios cuyo objetivo persigue crear un menu en dialog, 
 que me permita ingresar informacion sobre un dominio a crear en LDAP, El objetivo de los ejercicios preparatorios 
