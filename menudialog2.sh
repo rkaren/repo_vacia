@@ -1,4 +1,5 @@
 #!/bin/bash
+#script para poder leer entradas
 #archivo temporal donde guardar lo que vamos leyendo
 #INPUT=/tmp/menu.sh.$$
 #INPUT=/tmp/menu.sh.$$
@@ -6,6 +7,7 @@
 #OUTPUT=/tmp/output.sh.$$
 
 #variable que coge lo que se ingresa en cada opcion(por ende en cada funcion)
+let retorno
 #function_admin
 let administrador
 #function_servidor
@@ -103,9 +105,9 @@ function_csvarchivo(){
   #ingreso de usuarios de dominio establecido alderaan
   #variable q almacena linea a linea e inserta tbn linea a linea
   let fila
-  #archivo CSV a leer con cat reemplazamos x el q  ahora sera seleccionado
+  #archivo CSV a leer con cat muestra100curada.csv lo reemplazamos x el q  ahora sera seleccionado
   #declarado arriba E INGRESADO EN EL SUBMENU  selectcsv
-  cat $csvarchivo
+  cat $csvarchivo |
   #bucle para leer campos
   #IFS  es separador interno de campo como en /etc/passwd hay :
   # leera read user uid gid 
@@ -113,7 +115,7 @@ function_csvarchivo(){
   while IFS=, read numusu usu grupusu
   do
   # para separar cada declaracion de usuario en el archivo ldif
-   printf "\n" >>usuarios.ldif
+# printf \n >>usuarios.ldif
   #y reemplaza el valorvariable en cada linea del formato Ldif para luego pasarlo$
   #traemos 2 datos funciones controladordominio y extension
   fila="dn: uid=$usu,ou=people,dc=$controladordc,dc=$extension"
@@ -146,7 +148,7 @@ function_csvarchivo(){
   fila="description: User account"
   echo $fila >>usuarios.ldif
   done
-exit 0
+#exit 0
 }
 
 #dibuja  menu principal
@@ -159,7 +161,8 @@ function_menu(){
 		Servidor "Indica el nombre sel servidor" \
 		Extension "Indica su extension" \
 		Origen "Indica el nombre del fichero CSV  a leer" \
-		Salir "Salir del Script" 2> "${INPUT}"
+		Parsear "necesario para transformacion csv a ldif" \
+		Salir "Salir del Script" 2>"${INPUT}"
 
 	#lee lo q escriben
 	menuitem=$(<"${INPUT}")
@@ -169,9 +172,10 @@ function_menu(){
 	case $menuitem in
 		Nombre) echo "Elegiste nombre"; function_admin;;
 		Servidor) echo "Elegiste servidor"; function_controlador;;
-		Extension) echo "Elegiste extension";function_extension;;
-		Origen) echo "Elegiste origen";function_csvarchivo;;
-		Exit) echo "Bye"; break;;
+		Extension) echo "Elegiste extension"; function_extension;;
+		Origen) echo "Elegiste origen"; function_selectcsv;;
+		Parsear) echo "Elegiste parsear en csv ingresado"; function_csvarchivo;;
+		Exit) echo "Bye";
 	esac
 }
 #salir=7
@@ -181,8 +185,4 @@ do
 	function_menu
 done
 
-#añadimos al dominio
-#ldapadd -x -D cn=admin,dc=alderaan,dc=ally -W -f usuariosldif.ldif
-#rm /tmp/input.txt
-#rm /tmp/menu.sh
 
