@@ -1,0 +1,42 @@
+dn: uid=AB,ou=people,dc=alderaan,dc=ally
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: AB
+sn: AB
+uid: AB
+uidNumber: 101
+gidNumber: 202
+userPassword: AB
+homeDirectory: /home/AB
+loginShell: /bin/bash
+gecos: AB
+description: User account
+dn: uid=AC,ou=people,dc=alderaan,dc=ally
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: AC
+sn: AC
+uid: AC
+uidNumber: 102
+gidNumber: 202
+userPassword: AC
+homeDirectory: /home/AC
+loginShell: /bin/bash
+gecos: AC
+description: User account
+dn: uid=AD,ou=people,dc=alderaan,dc=ally
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: AD
+sn: AD
+uid: AD
+uidNumber: 103
+gidNumber: 201
+userPassword: AD
+homeDirectory: /home/AD
+loginShell: /bin/bash
+gecos: AD
+description: User account
