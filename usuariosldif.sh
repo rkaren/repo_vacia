@@ -3,11 +3,12 @@
   #variable q almacena linea a linea e inserta tbn linea a linea
   let fila
   #archivo CSV a leer con cat
+  cat archivito.csv |
   #bucle para leer campos
   #IFS  es separador interno de campo como en /etc/passwd hay :
   # leera read user uid gid 
   # determinamos q mientras IFS=, leer num usua, usu grupusu
-  cat archivito.csv |  while IFS=, read numusu usu grupusu
+  while IFS=, read numusu usu grupusu
   do
   # para separar cada declaracion de usuario en el archivo ldif
    printf "\n" >>usuarios.ldif
