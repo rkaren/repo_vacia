@@ -1,6 +1,6 @@
 # repo_vacia
 #Estudiante: KAREN MARTINEZ MENDOZA
-Repositorios para automatizar creación fichero .ldif 
+#Repositorios para automatizar creación fichero .ldif 
 
 Este repositorio contiene ejercicios basicos y preparatorios cuyo objetivo persigue crear un menu en dialog, que me permita ingresar informacion para la cabecera y cuerpo del fichero .ldif que sera de gran ayuda cuando necesitemos ingresar grandes cantidades de usuarios en un servidor de directorio LDAP, El objetivo de los ejercicios preparatorios se centra en 2 archivos: 
 
